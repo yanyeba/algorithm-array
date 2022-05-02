@@ -1,0 +1,10 @@
+def twoSum( nums, target):
+    for i in range(len(nums)):  # 遍历列表
+        another_number = target - nums[i]  # 减法公式
+        if another_number in nums[i + 1:]: # 判断res,是否在新的列表中。   nums[i+1:] : 建立一个新的列表。
+            return [i, nums[i + 1:].index(another_number) + i + 1]
+            # nums[i + 1:].index(res)+i：新列表索引。
+            # 因为要返回原列表索引，新列表比是从原列表的第二个元素开始切片。所以要加1
+            
+ print(twoSum(li,5))
+ li = [1,2,4]
